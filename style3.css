@@ -1,0 +1,47 @@
+.button-container h2{
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.btn{
+    display: inline-block;
+    background: red;
+    text-decoration: none;
+    width: 300px;
+    height: 110px;
+    margin: 24px, 24px;
+    border-radius: 10px;
+    box-shadow: inset 0 4 15 rgba(0, 0, 0, 0.2);
+    position: relative;
+    left: 300px;
+    overflow: hidden;
+}
+
+.btn.hover::after,
+.btn.hover::before{
+    content: "You're 100% sure that I mean something to you?";
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    transition: all 400ms;
+    right: 0;
+}
+
+.btn.btn.hover:hover::after{
+    right: -300px;
+}
+
+.btn.btn.hover::before{
+    content: "You care enough to talk to me but do you care because im broken or do you actually care?";
+    right: 300px;
+}
+
+.btn.btn.hover:hover::before{
+    right: 0;
+}

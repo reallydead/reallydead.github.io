@@ -1,0 +1,47 @@
+.button-container h2{
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.btn{
+    display: inline-block;
+    background: red;
+    text-decoration: none;
+    width: 220px;
+    height: 70px;
+    margin: 24px, 24px;
+    border-radius: 10px;
+    box-shadow: inset 0 4 15 rgba(0, 0, 0, 0.2);
+    position: relative;
+    left: 300px;
+    overflow: hidden;
+}
+
+.btn.hover::after,
+.btn.hover::before{
+    content: "Don't click this unless you really mean it...";
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    transition: all 400ms;
+    right: 0;
+}
+
+.btn.btn.hover:hover::after{
+    right: -300px;
+}
+
+.btn.btn.hover::before{
+    content: "You really mean it...?";
+    right: 300px;
+}
+
+.btn.btn.hover:hover::before{
+    right: 0;
+}
